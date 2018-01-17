@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Doro Wu <fcwu.tw@gmail.com>
+MAINTAINER Talmai Oliveira <to@talm.ai>
 
 ENV DEBIAN_FRONTEND noninteractive
 
