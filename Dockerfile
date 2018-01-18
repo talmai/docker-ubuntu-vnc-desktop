@@ -26,6 +26,7 @@ RUN apt-get update \
         mesa-utils libgl1-mesa-dri \
         gnome-themes-standard gtk2-engines-pixbuf gtk2-engines-murrine pinta arc-theme \
         dbus-x11 x11-utils \
+   && apt-get -y install \
         ca-certificates \
         apt-utils \
         dbus-x11 \
@@ -37,6 +38,7 @@ RUN apt-get update \
         libgtk2.0-0 \
         libatk-adaptor \
         libgail-common \        
+    && apt-get -y -f install && \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
