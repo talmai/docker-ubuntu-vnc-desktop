@@ -38,7 +38,7 @@ RUN apt-get update \
         libgtk2.0-0 \
         libatk-adaptor \
         libgail-common \        
-    && apt-get -y -f install && \
+    && apt-get -y -f install \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
