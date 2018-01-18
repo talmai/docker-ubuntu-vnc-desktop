@@ -46,6 +46,11 @@ RUN curl -O https://download.sublimetext.com/sublime-text_build-"${SUBLIME_BUILD
     dpkg -i -R sublime-text_build-"${SUBLIME_BUILD}"_amd64.deb || echo "\n Will force install of missing ST3 dependencies...\n" && \
     apt-get -y -f install && \
     rm -rvf sublime-text_build-"${SUBLIME_BUILD}"_amd64.deb
+    
+RUN locale-gen "en_US.UTF-8" && \
+    dpkg-reconfigure locales
+
+RUN apt-get install -y golang-go
         
 # tini for subreap                                   
 ENV TINI_VERSION v0.9.0
