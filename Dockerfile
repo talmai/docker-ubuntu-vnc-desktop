@@ -26,10 +26,25 @@ RUN apt-get update \
         mesa-utils libgl1-mesa-dri \
         gnome-themes-standard gtk2-engines-pixbuf gtk2-engines-murrine pinta arc-theme \
         dbus-x11 x11-utils \
+        ca-certificates \
+        apt-utils \
+        dbus-x11 \
+        curl \
+        git \
+        python \
+        php7.0 \
+        libcanberra-gtk-module \
+        libgtk2.0-0 \
+        libatk-adaptor \
+        libgail-common \        
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Sublime
+ARG SUBLIME_BUILD="${SUBLIME_BUILD:-3156}"
+curl -O https://download.sublimetext.com/sublime-text_build-"${SUBLIME_BUILD}"_amd64.deb && \
+dpkg -i -R sublime-text_build-"${SUBLIME_BUILD}"_amd64.deb || echo "\n Will force install of missing ST3 dependencies...\n" && \
 
 # tini for subreap                                   
 ENV TINI_VERSION v0.9.0
