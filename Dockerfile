@@ -50,8 +50,9 @@ RUN curl -O https://download.sublimetext.com/sublime-text_build-"${SUBLIME_BUILD
 RUN locale-gen "en_US.UTF-8" && \
     dpkg-reconfigure locales
 
-RUN apt-get install -y golang-go
-        
+RUN apt-get update && \
+    apt-get install -y golang-go openjdk-8-jre
+    
 # tini for subreap                                   
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
