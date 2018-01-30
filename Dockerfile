@@ -36,6 +36,8 @@ RUN apt-get update \
         libgtk2.0-0 \
         libatk-adaptor \
         libgail-common \        
+        texlive \        
+        latexmk \        
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
