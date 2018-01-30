@@ -37,7 +37,8 @@ RUN apt-get update \
         libatk-adaptor \
         libgail-common \        
         texlive \        
-        latexmk \        
+        latexmk \    
+        evince \            
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
