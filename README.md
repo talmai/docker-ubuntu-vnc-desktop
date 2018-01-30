@@ -4,7 +4,7 @@ docker-ubuntu-vnc-desktop
 [![Docker Pulls](https://img.shields.io/docker/pulls/talmai/docker-ubuntu-vnc-desktop.svg)](https://hub.docker.com/r/talmai/docker-ubuntu-vnc-desktop/)
 [![Docker Stars](https://img.shields.io/docker/stars/talmai/docker-ubuntu-vnc-desktop.svg)](https://hub.docker.com/r/talmai/docker-ubuntu-vnc-desktop/)
 
-Docker image to provide HTML5 VNC interface to access Ubuntu 16.04 LXDE desktop environment.
+Docker image to provide HTML5 VNC interface to access Ubuntu 16.04 LXDE desktop environment. Includes sublime text, latex and go dependencies.
 
 Quick Start
 -------------------------
