@@ -37,7 +37,11 @@ RUN apt-get update \
         libgail-common \        
         texlive \        
         latexmk \    
-        evince \            
+        evince \
+        guake \
+        unzip \
+        texlive-latex-extra \
+        chromium-browser \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
